@@ -211,7 +211,8 @@ header .branches li a:hover {
   -ms-transform: translateY(-20px);
   -o-transform: translateY(-20px);
 }
-.managers .container .boxes .box .image img {
+.managers .container .boxes .box .image img,
+.managers .container .boxes .box .image video {
   width: 100px;
   height: 100px;
   border-radius: 50%;
