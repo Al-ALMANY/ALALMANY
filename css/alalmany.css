@@ -53,7 +53,9 @@ a {
 /* End Global Rules */
 /* Start Home Page */
 /* Start Background */
-.background {
+.background-pc,
+.background-tab,
+.background-phone {
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -61,7 +63,43 @@ a {
   overflow: hidden;
   z-index: -100;
 }
-.background + span {
+/* Small */
+@media (min-width: 0px) {
+  .background-phone {
+    display: inline;
+  }
+  .background-tab {
+    display: none;
+  }
+  .background-pc {
+    display: none;
+  }
+}
+/* Medium */
+@media (min-width: 586px) {
+  .background-phone {
+    display: none;
+  }
+  .background-tab {
+    display: inline;
+  }
+  .background-pc {
+    display: none;
+  }
+}
+/* Large */
+@media (min-width: 830px) {
+  .background-phone {
+    display: none;
+  }
+  .background-tab {
+    display: none;
+  }
+  .background-pc {
+    display: inline;
+  }
+}
+.cover {
   content: "";
   position: fixed;
   width: 100vw;
@@ -96,7 +134,7 @@ header .branches {
 header .branches li {
   font-size: 20px;
 }
-header .branches li a {
+header .branches li .link {
   display: block;
   padding: 10px;
   color: white;
@@ -109,8 +147,16 @@ header .branches li a {
 header .branches li a:hover {
   color: #444;
 }
+@media (max-width: 586px) {
+  header .branches li {
+    font-size: 16px;
+  }
+  header .logo img {
+    width: 40px;
+  }
+}
 /* End Header */
-/* Start Section */
+/* Start Managers */
 .title {
   padding-top: 100px;
   text-align: center;
@@ -119,8 +165,6 @@ header .branches li a:hover {
 .managers {
   padding-top: 100px;
 }
-.managers .container {
-}
 .managers .container .boxes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -128,7 +172,6 @@ header .branches li a:hover {
 }
 .managers .container .boxes .box {
   background-color: rgb(0 0 0 / 70%);
-  /* background-color: red; */
   padding: 20px;
   border-radius: 6px;
   display: flex;
@@ -202,8 +245,34 @@ header .branches li a:hover {
 .managers .container .boxes .box .username:hover {
   color: white;
 }
-/* End Section */
+/* End Managers */
+/* Start Story */
+.story {
+  margin-top: 30px;
+}
+.story .container {
+  text-align: center;
+}
+.story .container h2 {
+}
+.story .container p {
+}
+/* End Story */
 /* END Home Page */
-/* Start Animation */
-
-/* End Animation */
+/* Start Apply Page */
+.apply .container {
+  text-align: center;
+  padding-top: 100px;
+}
+/* End Apply Page */
+/* Start Framework */
+.active {
+  color: #777;
+  padding: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+/* End Framework */
