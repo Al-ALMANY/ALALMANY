@@ -144,6 +144,9 @@ header .branches li .link {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
+header .branches li .active {
+  display: block;
+}
 header .branches li a:hover {
   color: #444;
 }
@@ -270,7 +273,7 @@ header .branches li a:hover {
 /* Start Footer */
 footer {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
   padding-top: 15px;
   padding-bottom: 10px;
   background-color: rgb(0 0 0 / 70%);
@@ -290,6 +293,11 @@ footer a:hover {
 footer .copyright {
   padding-top: 20px;
   border-top: #eee 1px solid;
+}
+@media (max-width:586px) {
+  footer .copyright-en {
+    font-size: 13px;
+  }
 }
 /* End Footer */
 /* END Home Page */
@@ -344,5 +352,8 @@ footer .copyright {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+.t-center {
+  text-align: center;
 }
 /* End Framework */
